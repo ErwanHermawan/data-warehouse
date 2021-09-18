@@ -1,0 +1,156 @@
+//-------------------------------------------------------------------------------
+  @name: Footer
+  -------------------------------------------------------------------------------//
+
+-
+  dataFooter = {
+    promo: {
+      title: 'Try for free!',
+      desc: 'Get limited 1 week free try our features!'
+    },
+    logo: {
+      to: 'index.html',
+      src: 'logo-text.svg',
+      alt: 'Data Warehouse'
+    },
+    about: {
+      address: 'Warehouse Society, 234 Bahagia Ave Street PRBW 29281',
+      email: 'info@warehouse.projec',
+      phone: '1-232-3434 (Main)'
+    },
+    menu: [
+      {
+        to: 'about.html',
+        title: 'About',
+        nav: [
+          {
+            to: 'profile.html',
+            title: 'Profile'
+          },
+          {
+            to: 'features.html',
+            title: 'Features'
+          },
+          {
+            to: 'careers.html',
+            title: 'Careers'
+          },
+          {
+            to: 'dwnews.html',
+            title: 'DW News'
+          },
+        ]
+      },
+      {
+        to: 'help.html',
+        title: 'Help',
+        nav: [
+          {
+            to: 'support.html',
+            title: 'Support'
+          },
+          {
+            to: 'signup.html',
+            title: 'Sign up'
+          },
+          {
+            to: 'guide.html',
+            title: 'Guide'
+          },
+          {
+            to: 'reports.html',
+            title: 'Reports'
+          },
+          {
+            to: 'qa.html',
+            title: 'Q&A'
+          },
+        ]
+      },
+    ],
+    socialMedia: {
+      to: '#',
+      title: 'Social Media',
+      sosmed: [
+        {
+          to: '#',
+          class: 'facebook'
+        },
+        {
+          to: '#',
+          class: 'twitter'
+        },
+        {
+          to: '#',
+          class: 'instagram'
+        }
+      ]
+    },
+    bottom: {
+      copyright: '© Datawarehouse™, 2020. All rights reserved.',
+      companyReg: 'Company Registration Number: 21479524.',
+      btn: {
+        to: ''
+      }
+    }
+  }
+
+//footer
+.footer
+  .container
+    .footer__top
+      .footer__top__txt
+        h2.footer__top__title !{dataFooter.promo.title}
+        p.footer__top__desc !{dataFooter.promo.desc}
+      .footer__top__btn
+        ='\n'
+        a.btn.btn--secondary(href="") Learn more
+        ='\n'
+        a.btn.btn--white(href="") Request demo
+          i.fi-arrow-right
+    .footer__middle
+      .footer__about
+        ='\n'
+        a.footer__logo(href=dataFooter.logo.to)
+          ='\n'
+          img.footer__logo__el(src="assets/img/logo/"+dataFooter.logo.src alt=dataFooter.logo.alt)/
+        .footer__about__txt
+          p.footer__about__txt__address !{dataFooter.about.address}
+          p.footer__about__txt__email !{dataFooter.about.email}
+          p.footer__about__txt__phone !{dataFooter.about.phone}
+      .footer__menu
+        each val in dataFooter.menu
+          .footer__list
+            h4.footer__title
+              ='\n'
+              a.footer__link(href=val.to) !{val.title}
+            ul.footer__nav
+              each item in val.nav
+                li.footer__item
+                  ='\n'
+                  a.footer__link(href=item.to) !{item.title}
+      .footer__contact
+        h4.footer__title
+          a.footer__link(href=dataFooter.socialMedia.to) !{dataFooter.socialMedia.title}
+        ul.footer__sosmed
+          each val in dataFooter.socialMedia.sosmed
+            li.footer__sosmed__item
+              ='\n'
+              a.footer__sosmed__link(href=val.to, class='footer__sosmed__link--'+val.class, target='_blank')
+                ='\n'
+              i(class='fi-'+val.class)
+    .footer__bottom
+      .footer__bottom__copyright
+        p.footer__bottom__txt !{dataFooter.bottom.copyright}
+        p.footer__bottom__txt !{dataFooter.bottom.companyReg}
+      .footer__bottom__btn
+        button.footer__bottom__chat
+        img.footer__bottom__chat__img(src="assets/img/icon/chat.svg" alt="")/
+
+
+
+
+
+
+
+

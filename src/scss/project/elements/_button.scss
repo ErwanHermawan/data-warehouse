@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Elements Button
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 160px;
+  padding: 18px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: solid 1px transparent;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  @include font-size(body);
+  font-weight: fw(bold);
+  background-color: transparent;
+  color: color(white);
+  user-select: none;
+  transition: all 350ms ease;
+  @include small {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+  &--primary {
+    background-color: color(primary);
+  }
+  &--secondary {
+    background-color: color(secondary);
+  }
+  &--white {
+    background-color: color(white);
+    color: color(black, 2);
+    @include shadow(8);
+    .fi-arrow-right {
+      margin-left: 30px;
+      color: color(primary);
+      @include small {
+        margin-left: 16px;
+      }
+    }
+  }
+}

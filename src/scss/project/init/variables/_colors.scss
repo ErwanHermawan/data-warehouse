@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Variable: Colors
+   ========================================================================== */
+
+// colors
+$colors: (
+  primary: #9c69e2,
+  secondary: #f063b8,
+  tertiary: #ffb27d,
+  black: (
+    1: #212353,
+    2: #4b5d68,
+  ),
+  grey: #ddd,
+  white: #fff,
+  overlay: rgba(#000, 0.7),
+  social-media: (
+    facebook: #1877f2,
+    twitter: #1da1f2,
+    instagram: #405de6,
+    whatsapp: #25d366,
+    youtube: #ff0000,
+    spotify: #1db954,
+  ),
+);
