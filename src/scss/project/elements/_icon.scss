@@ -18,6 +18,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fi-chevron-down:before {
+  content: "\e909";
+}
 .fi-arrow-right:before {
   content: "\e900";
 }
@@ -29,19 +32,4 @@
 }
 .fi-facebook:before {
   content: "\e903";
-}
-.fi-comments .path1:before {
-  content: "\e904";
-}
-.fi-comments .path2:before {
-  content: "\e905";
-}
-.fi-comments .path3:before {
-  content: "\e906";
-}
-.fi-comments .path4:before {
-  content: "\e907";
-}
-.fi-comments .path5:before {
-  content: "\e908";
 }

@@ -44,21 +44,6 @@ Layout: Header
   .scroll-down &,
   .header-on-scroll & {
     transition: all 0.5s ease;
-    #{$h} {
-      &__logo {
-        height: 48px;
-        transition: all 0.3s ease;
-        @include medium {
-          height: 40px;
-        }
-      }
-      &__demo {
-        .btn {
-          padding-top: 12px;
-          padding-bottom: 12px;
-        }
-      }
-    }
   }
   .scroll-down & {
     box-shadow: none;
@@ -85,15 +70,16 @@ Layout: Header
     display: inline-block;
     vertical-align: middle;
     transition: all 0.3s ease;
+    padding: 10px 0;
+    @include medium {
+      padding: 0;
+    }
     @include small {
       padding: 4px 0;
     }
     &__el {
-      height: 60px;
+      height: 40px;
       display: block;
-      @include medium {
-        height: 40px;
-      }
       @include small {
         height: 32px;
       }

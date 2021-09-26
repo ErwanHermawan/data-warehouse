@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170731 at Thu Jul 16 05:35:47 2015
- By Aleksey,,,
+Created by FontForge 20190801 at Thu Jul 16 02:35:47 2015
+ By root
 (c) 1990-2006 Apple Computer Inc. (c) 1981 Linotype AG (c) 1990-91 Type Solutions Inc.
 </metadata>
 <defs>
@@ -20,7 +20,7 @@ Created by FontForge 20170731 at Thu Jul 16 05:35:47 2015
     cap-height="1470"
     bbox="-2084 -985 2942 2374"
     underline-thickness="101"
-    underline-position="-405"
+    underline-position="-305"
     unicode-range="U+0008-FFA7"
   />
 <missing-glyph horiz-adv-x="1479" 

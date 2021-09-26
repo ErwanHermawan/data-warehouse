@@ -7,6 +7,19 @@ $colors: (
   primary: #9c69e2,
   secondary: #f063b8,
   tertiary: #ffb27d,
+  purple: (
+    1: #9c69e2,
+    2: #f5f0fc,
+  ),
+  pink: (
+    1: #f063b8,
+    2: #fde8f4,
+    3: #fdeff8,
+  ),
+  green: (
+    1: #68c9ba,
+    2: #f0faf8,
+  ),
   black: (
     1: #212353,
     2: #4b5d68,
@@ -14,6 +27,7 @@ $colors: (
   grey: #ddd,
   white: #fff,
   overlay: rgba(#000, 0.7),
+  opacity: rgba(#9c69e2, 0.2),
   social-media: (
     facebook: #1877f2,
     twitter: #1da1f2,

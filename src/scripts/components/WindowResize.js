@@ -5,7 +5,8 @@
 
 // --- components
 import {
-  Header
+  Header,
+  Footer
 } from 'components';
 
 // --- WindowResize
@@ -37,6 +38,8 @@ const WindowResize = (() => {
       // Run Function on Resize end
       $('body').removeClass('hold-transition');
       Header.checkClass();
+      Footer.footerSticky();
+      Footer.destroyAccordion();
     }
 
   }

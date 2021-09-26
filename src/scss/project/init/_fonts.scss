@@ -1,41 +1,16 @@
 /* ==========================================================================
  Init: Fonts
  ========================================================================== */
-@font-face {
-  font-family: "Avenir LT Std";
-  src: url("../fonts/AvenirLTStd-Black.eot");
-  src: url("../fonts/AvenirLTStd-Black.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/AvenirLTStd-Black.woff2") format("woff2"),
-    url("../fonts/AvenirLTStd-Black.woff") format("woff"),
-    url("../fonts/AvenirLTStd-Black.ttf") format("truetype"),
-    url("../fonts/AvenirLTStd-Black.svg#AvenirLTStd-Black") format("svg");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
-  font-family: "Avenir LT Std";
-  src: url("../fonts/AvenirLTStd-Roman.eot");
-  src: url("../fonts/AvenirLTStd-Roman.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/AvenirLTStd-Roman.woff2") format("woff2"),
-    url("../fonts/AvenirLTStd-Roman.woff") format("woff"),
-    url("../fonts/AvenirLTStd-Roman.ttf") format("truetype"),
-    url("../fonts/AvenirLTStd-Roman.svg#AvenirLTStd-Roman") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Avenir LT Std";
-  src: url("../fonts/AvenirLTStd-Book.eot");
-  src: url("../fonts/AvenirLTStd-Book.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/AvenirLTStd-Book.woff2") format("woff2"),
-    url("../fonts/AvenirLTStd-Book.woff") format("woff"),
-    url("../fonts/AvenirLTStd-Book.ttf") format("truetype"),
-    url("../fonts/AvenirLTStd-Book.svg#AvenirLTStd-Book") format("svg");
-  font-weight: normal;
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica-Bold.eot");
+  src: url("../fonts/Helvetica-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Helvetica-Bold.woff2") format("woff2"),
+    url("../fonts/Helvetica-Bold.woff") format("woff"),
+    url("../fonts/Helvetica-Bold.ttf") format("truetype"),
+    url("../fonts/Helvetica-Bold.svg#Helvetica-Bold") format("svg");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -48,19 +23,73 @@
     url("../fonts/Helvetica-Bold.woff") format("woff"),
     url("../fonts/Helvetica-Bold.ttf") format("truetype"),
     url("../fonts/Helvetica-Bold.svg#Helvetica-Bold") format("svg");
-  font-weight: bold;
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-Regular.eot");
+  src: url("../fonts/Avenir-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Avenir-Regular.woff2") format("woff2"),
+    url("../fonts/Avenir-Regular.woff") format("woff"),
+    url("../fonts/Avenir-Regular.ttf") format("truetype"),
+    url("../fonts/Avenir-Regular.svg#Avenir-Regular") format("svg");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Data-Warehouse";
-  src: url("../fonts/Data-Warehouse.eot?58qygg");
-  src: url("../fonts/Data-Warehouse.eot?58qygg#iefix")
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-RegularItalic.eot");
+  src: url("../fonts/Avenir-RegularItalic.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/Data-Warehouse.ttf?58qygg") format("truetype"),
-    url("../fonts/Data-Warehouse.woff?58qygg") format("woff"),
-    url("../fonts/Data-Warehouse.svg?58qygg#Data-Warehouse") format("svg");
+    url("../fonts/Avenir-RegularItalic.woff2") format("woff2"),
+    url("../fonts/Avenir-RegularItalic.woff") format("woff"),
+    url("../fonts/Avenir-RegularItalic.ttf") format("truetype"),
+    url("../fonts/Avenir-RegularItalic.svg#Avenir-RegularItalic") format("svg");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-Medium.eot");
+  src: url("../fonts/Avenir-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Avenir-Medium.woff2") format("woff2"),
+    url("../fonts/Avenir-Medium.woff") format("woff"),
+    url("../fonts/Avenir-Medium.ttf") format("truetype"),
+    url("../fonts/Avenir-Medium.svg#Avenir-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir-MediumItalic.eot");
+  src: url("../fonts/Avenir-MediumItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Avenir-MediumItalic.woff2") format("woff2"),
+    url("../fonts/Avenir-MediumItalic.woff") format("woff"),
+    url("../fonts/Avenir-MediumItalic.ttf") format("truetype"),
+    url("../fonts/Avenir-MediumItalic.svg#Avenir-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "data-warehouse";
+  src: url("../fonts/icon/data-warehouse.eot?58qygg");
+  src: url("../fonts/icon/data-warehouse.eot?58qygg#iefix")
+      format("embedded-opentype"),
+    url("../fonts/icon/data-warehouse.ttf?58qygg") format("truetype"),
+    url("../fonts/icon/data-warehouse.woff?58qygg") format("woff"),
+    url("../fonts/icon/data-warehouse.svg?58qygg#Data-Warehouse") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;

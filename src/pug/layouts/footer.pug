@@ -3,10 +3,18 @@
   -------------------------------------------------------------------------------//
 
 -
-  dataFooter = {
-    promo: {
+  data = {
+    trial: {
       title: 'Try for free!',
-      desc: 'Get limited 1 week free try our features!'
+      desc: 'Get limited 1 week free try our features!',
+      learnMore: {
+        to: 'lear-more.html',
+        txt: 'Learn More'
+      },
+      demo: {
+        to: 'demo.html',
+        txt: 'Request Demo'
+      },
     },
     logo: {
       to: 'index.html',
@@ -68,10 +76,10 @@
         ]
       },
     ],
-    socialMedia: {
+    sosmed: {
       to: '#',
       title: 'Social Media',
-      sosmed: [
+      item: [
         {
           to: '#',
           class: 'facebook'
@@ -87,67 +95,63 @@
       ]
     },
     bottom: {
-      copyright: '© Datawarehouse™, 2020. All rights reserved.',
-      companyReg: 'Company Registration Number: 21479524.',
+      copyright: '&copy; Datawarehouse&trade;, 2020. All rights reserved.<br />Company Registration Number: 21479524.',
       btn: {
         to: ''
       }
     }
   }
 
-//footer
+// .footer
 .footer
-  .container
-    .footer__top
-      .footer__top__txt
-        h2.footer__top__title !{dataFooter.promo.title}
-        p.footer__top__desc !{dataFooter.promo.desc}
-      .footer__top__btn
+  // .footer_trial
+  .footer__trial
+    .container
+      .footer__trial__txt
+        h2.footer__trial__title !{data.trial.title}
+        p.footer__trial__desc !{data.trial.desc}
+      .footer__trial__btn
         ='\n'
-        a.btn.btn--secondary(href="") Learn more
+        a.btn.btn--secondary(href=data.trial.learnMore.to) !{data.trial.learnMore.txt}
         ='\n'
-        a.btn.btn--white(href="") Request demo
+        a.btn.btn--white(href=data.trial.demo.to) !{data.trial.demo.txt}
+          ='\n'
           i.fi-arrow-right
-    .footer__middle
+  // .footer_menu
+  .footer__menu
+    .container
+      .footer__wrapper
+        .footer__list.js-accordion-footer
+          each val in data.menu
+            .footer__list__item
+              h4.footer__title !{val.title}
+              ul.footer__nav
+                each item in val.nav
+                  li.footer__item
+                    ='\n'
+                    a.footer__link(href=item.to) !{item.title}
+        .footer__contact
+          h4.footer__contact__title !{data.sosmed.title}
+          ul.footer__contact__nav
+            each sosmedItem in data.sosmed.item
+              li.footer__contact__item(class=sosmedItem.class)
+                ='\n'
+                a.footer__contact__link(href=sosmedItem.to)
+                i(class='fi-'+sosmedItem.class)
       .footer__about
         ='\n'
-        a.footer__logo(href=dataFooter.logo.to)
+        a.footer__logo(href=data.logo.to)
           ='\n'
-          img.footer__logo__el(src="assets/img/logo/"+dataFooter.logo.src alt=dataFooter.logo.alt)/
+          img.footer__logo__el(src="assets/img/logo/"+data.logo.src alt=data.logo.alt)/
         .footer__about__txt
-          p.footer__about__txt__address !{dataFooter.about.address}
-          p.footer__about__txt__email !{dataFooter.about.email}
-          p.footer__about__txt__phone !{dataFooter.about.phone}
-      .footer__menu
-        each val in dataFooter.menu
-          .footer__list
-            h4.footer__title
-              ='\n'
-              a.footer__link(href=val.to) !{val.title}
-            ul.footer__nav
-              each item in val.nav
-                li.footer__item
-                  ='\n'
-                  a.footer__link(href=item.to) !{item.title}
-      .footer__contact
-        h4.footer__title
-          a.footer__link(href=dataFooter.socialMedia.to) !{dataFooter.socialMedia.title}
-        ul.footer__sosmed
-          each val in dataFooter.socialMedia.sosmed
-            li.footer__sosmed__item
-              ='\n'
-              a.footer__sosmed__link(href=val.to, class='footer__sosmed__link--'+val.class, target='_blank')
-                ='\n'
-              i(class='fi-'+val.class)
-    .footer__bottom
-      .footer__bottom__copyright
-        p.footer__bottom__txt !{dataFooter.bottom.copyright}
-        p.footer__bottom__txt !{dataFooter.bottom.companyReg}
-      .footer__bottom__btn
-        button.footer__bottom__chat
-        img.footer__bottom__chat__img(src="assets/img/icon/chat.svg" alt="")/
-
-
+          p.footer__about__txt__address !{data.about.address}
+          p.footer__about__txt__email !{data.about.email}
+        p.footer__about__txt__phone !{data.about.phone}
+  // .footer_copyright
+  .footer__copyright
+    .container
+      p.footer__copyright__txt !{data.bottom.copyright}
+include ../components/floating-chat.pug
 
 
 

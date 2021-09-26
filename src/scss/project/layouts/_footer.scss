@@ -3,13 +3,16 @@ Layout: Footer
 ========================================================================== */
 
 .footer {
-  position: relative;
-  padding-bottom: 276px;
-  @include large {
-    padding-bottom: 196px;
-  }
-  @include medium {
-    padding-bottom: 156px;
+  $f: &;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding-bottom: 24px;
+  background-color: color(white);
+  @include small {
+    position: relative;
+    padding-bottom: 16px;
   }
   &::before {
     content: "";
@@ -19,25 +22,31 @@ Layout: Footer
     width: 100%;
     border-top: 3px solid color(primary);
     opacity: 0.2;
+    @include small {
+      border-width: 2px;
+    }
   }
-  &__top {
-    padding: 64px 0;
+  &__trial {
+    padding: 64px 0 80px;
     @include clearfix;
     @include large {
-      padding: 48px 0;
+      padding: 56px 0 72px;
     }
     @include medium {
-      padding: 48px 0 32px;
+      padding: 48px 0 56px;
     }
     @include small {
-      padding: 32px 0 24px;
+      padding: 40px 0 32px;
     }
+
     &__txt {
       float: left;
-      @include small {
+      @include medium {
         float: none;
-        display: block;
-        margin-bottom: 16px;
+        margin-bottom: 32px;
+      }
+      @include small {
+        margin-bottom: 24px;
       }
     }
     &__title {
@@ -61,7 +70,7 @@ Layout: Footer
     &__btn {
       float: right;
       margin: 12px 0;
-      @include small {
+      @include medium {
         float: none;
         display: block;
         margin: 0;
@@ -71,25 +80,226 @@ Layout: Footer
         @include medium {
           margin-right: 16px;
         }
-        @include small {
-          margin-right: 8px;
+        @include x-small {
+          margin-right: 0;
+          margin-bottom: 16px;
         }
       }
     }
   }
-  &__middle {
-    padding: 64px 0 70px;
+  &__menu {
+    padding: 64px 0 48px;
     @include clearfix;
     @include large {
-      padding: 48px 0 56px;
+      padding: 56px 0 40px;
     }
     @include medium {
-      padding: 32px 0 48px;
+      padding: 48px 0 40px;
     }
     @include small {
-      padding: 24px 0 48px;
+      padding: 40px 0 32px;
     }
   }
+  &__wrapper {
+    float: right;
+    @include clearfix;
+    @include medium {
+      float: none;
+      width: 100%;
+      margin-bottom: 48px;
+    }
+    @include small {
+      margin-bottom: 40px;
+    }
+  }
+  &__list {
+    float: left;
+    @include x-small {
+      float: none;
+      width: 100%;
+    }
+    &__item {
+      float: left;
+      margin-right: 152px;
+      @include large {
+        margin-right: 96px;
+      }
+      @include medium {
+        margin-right: 148px;
+      }
+      @include small {
+        margin-right: 96px;
+      }
+      @include x-small {
+        float: none;
+        margin: 0;
+      }
+      &--show {
+        #{$f}__title {
+          &::after {
+            transform: rotateX(180deg);
+            transition: all 0.5s ease 0.35s;
+          }
+        }
+        #{$f}__item {
+          opacity: 1;
+          transition: all 0.75s ease 0.35s;
+          transform: none;
+        }
+      }
+    }
+  }
+  &__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    @include x-small {
+      display: none;
+      padding-bottom: 24px;
+    }
+  }
+  &__title {
+    font-weight: fw(medium);
+    margin-bottom: 32px;
+    position: relative;
+    @include medium {
+      margin-bottom: 24px;
+    }
+    @include small {
+      @include font-size(h6);
+    }
+    @include x-small {
+      &::after {
+        content: "\e909";
+        font-family: "data-warehouse";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.5s ease 0.3s;
+      }
+    }
+  }
+  &__item {
+    margin-bottom: 32px;
+    @include medium {
+      margin-bottom: 24px;
+    }
+    @include small {
+      margin-bottom: 16px;
+    }
+    @include x-small {
+      opacity: 0;
+      transform: translateX(8px);
+      transition: all 0.75s ease 0s;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    transition: all 0.3 ease;
+    &:hover {
+      color: color(primary);
+    }
+  }
+
+  &__contact {
+    float: left;
+    @include small {
+      float: none;
+      width: 100%;
+    }
+    @include x-small {
+      padding-top: 16px;
+    }
+    &__title {
+      @include font-size(h4);
+      font-weight: fw(medium);
+      margin-bottom: 24px;
+      @include x-small {
+        margin-bottom: 16px;
+        @include font-size(h6);
+      }
+    }
+    &__nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &__item {
+      position: relative;
+      display: inline-block;
+      margin-right: 16px;
+      width: 50px;
+      height: 50px;
+      background-color: color(black, 2);
+      opacity: 0.2;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      @include small {
+        height: 40px;
+        width: 40px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .facebook,
+    .instagram,
+    .twitter {
+      &:hover {
+        transition: all 0.3s ease;
+        color: color(white);
+        opacity: 1;
+      }
+    }
+    .facebook {
+      &:hover {
+        background-color: color(social-media, facebook);
+      }
+    }
+    .instagram {
+      &:hover {
+        background-color: color(social-media, instagram);
+      }
+    }
+    .twitter {
+      &:hover {
+        background-color: color(social-media, twitter);
+      }
+    }
+    .telegram {
+      &:hover {
+        background-color: color(social-media, telegram);
+      }
+    }
+    &__link {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: block;
+      text-indent: -9999999px;
+      z-index: 2;
+      @include remove-tap-highlight;
+    }
+    .fi-facebook,
+    .fi-instagram,
+    .fi-twitter {
+      @include font-size(h5);
+      color: color(white);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      @include small {
+        @include font-size(h6);
+      }
+    }
+  }
+
   &__about {
     float: left;
     max-width: 324px;
@@ -101,11 +311,11 @@ Layout: Footer
       float: none;
       display: block;
       width: 100%;
+      max-width: initial;
       margin-right: 0;
-      margin-bottom: 32px;
     }
     &__txt {
-      font-weight: fw(semi-bold);
+      font-weight: fw(medium);
       &__address {
         margin-bottom: 24px;
         @include medium {
@@ -135,149 +345,15 @@ Layout: Footer
       display: block;
     }
   }
-  &__menu {
-    float: left;
-    @include clearfix;
-    @include small {
-      float: none;
-      display: block;
-      width: 100%;
-    }
-  }
-  &__list {
-    float: left;
-    margin-right: 152px;
-    @include large {
-      margin-right: 112px;
-    }
-    @include small {
-      margin-right: 56px;
-      margin-bottom: 32px;
-    }
-  }
-  &__nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-  }
-  &__title {
-    font-weight: fw(bold);
-    margin-bottom: 32px;
+
+  &__copyright {
+    padding: 24px 0;
     @include medium {
-      margin-bottom: 24px;
-    }
-    @include small {
-      @include font-size(h5);
-    }
-  }
-  &__item {
-    margin-bottom: 32px;
-    @include medium {
-      margin-bottom: 24px;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  &__link {
-    text-decoration: none;
-    transition: all 0.3 ease;
-    &:hover {
-      color: color(primary);
-    }
-  }
-  &__contact {
-    float: right;
-    @include small {
-      float: none;
-      display: block;
-      width: 100%;
-    }
-  }
-  &__sosmed {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    &__item {
-      display: inline-block;
-      position: relative;
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
-      background-color: color(grey);
-      color: color(white);
-      margin-right: 16px;
-      &:last-child {
-        margin-right: 0;
-      }
-      &:hover {
-        .fi-facebook {
-          &::before {
-            color: color(social-media, facebook);
-          }
-        }
-        .fi-twitter {
-          &::before {
-            color: color(social-media, twitter);
-          }
-        }
-        .fi-instagram {
-          &::before {
-            color: color(social-media, instagram);
-          }
-        }
-      }
-    }
-    &__link {
-      height: 100%;
-      display: block;
-      text-indent: -9999999px;
-      position: relative;
-      z-index: zi(footer-sosmed-link);
-    }
-    .fi-facebook,
-    .fi-instagram,
-    .fi-twitter {
-      font-size: 18px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: zi(footer-sosmed-icon);
-      &::before {
-        transition: all 0.5s ease;
-      }
-    }
-  }
-  &__bottom {
-    @include clearfix;
-    &__copyright {
-      float: left;
-      margin: 16px 0;
+      padding: 16px 0;
     }
     &__txt {
       @include font-size(small);
       margin-bottom: 0;
-    }
-    &__btn {
-      float: right;
-      position: relative;
-    }
-    &__chat {
-      border: 0;
-      outline: 0;
-      width: 60px;
-      height: 60px;
-      background-color: color(primary);
-      border-radius: 50%;
-      opacity: 0.2;
-      &__img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
     }
   }
 }

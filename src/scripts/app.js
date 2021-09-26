@@ -8,7 +8,8 @@ import {
 import {
   WinScroll,
   WindowResize,
-  Header
+  Header,
+  Footer
 } from 'components';
 
 // --- App
@@ -40,6 +41,7 @@ const App = (() => {
       WindowResize.init();
       WinScroll.init();
       Header.init();
+      Footer.init();
     })(jQuery);
   }
 
