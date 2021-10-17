@@ -45,7 +45,6 @@
     margin-left: auto;
     margin-right: auto;
     font-weight: fw(medium);
-    color: color(grey);
     @include small {
       @include font-size(body);
     }

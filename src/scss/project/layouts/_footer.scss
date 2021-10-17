@@ -20,7 +20,7 @@ Layout: Footer
     top: 0;
     left: 0;
     width: 100%;
-    border-top: 3px solid color(primary);
+    border-top: 3px solid color(primary, 1);
     opacity: 0.2;
     @include small {
       border-width: 2px;
@@ -201,7 +201,7 @@ Layout: Footer
     text-decoration: none;
     transition: all 0.3 ease;
     &:hover {
-      color: color(primary);
+      color: color(primary, 1);
     }
   }
 
