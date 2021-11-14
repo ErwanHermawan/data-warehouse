@@ -5,7 +5,7 @@
 [class^="fi-"],
 [class*=" fi-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "Data-Warehouse" !important;
+  font-family: "Datawarehouse" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -18,8 +18,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fi-arrow-left:before {
+  content: "\e904";
+}
 .fi-chevron-down:before {
   content: "\e909";
+  color: #4f4f4f;
 }
 .fi-arrow-right:before {
   content: "\e900";

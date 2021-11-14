@@ -22,7 +22,7 @@ const Testimonials = (() => {
       _selector.addClass('owl-carousel').owlCarousel({
         items: 1,
         rewind: false,
-        autoplay: true,
+        autoplay: false,
         autoHeight: true,
         autoWidth: true,
         dots: true,
@@ -59,7 +59,8 @@ const Testimonials = (() => {
   }
 
   return {
-    init
+    init,
+    checkCarousel: handleRunCarousel
   }
 
 })();

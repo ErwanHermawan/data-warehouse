@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------------------
-  @name: Testimonials Item
+  @name: Testimonials
   -------------------------------------------------------------------------------//
 
 //testimonials-item
@@ -7,12 +7,13 @@
   .testimonials__box
     .testimonials__head
       .testimonials__avatar
-        img.testimonials__avatar__el(src='assets/img/dummy/'+data.img alt=data.name)/
+        ='\n'
+        img.testimonials__avatar__el(src='assets/img/dummy/'+data.avatar, alt=data.name)/
       .testimonials__txt
-        h3.testimonials__name
+        h5.testimonials__name
           | !{data.name}
-        p.testimonials__position
+        h6.testimonials__position
           | !{data.position}
     .testimonials__body
-      p.testimonials__desc
+      p.testimonials__description
         | !{data.desc}

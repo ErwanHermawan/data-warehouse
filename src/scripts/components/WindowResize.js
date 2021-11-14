@@ -39,6 +39,7 @@ const WindowResize = (() => {
       $('body').removeClass('hold-transition');
       Header.checkClass();
       Footer.footerSticky();
+      Testimonials.checkCarousel();
     }
 
   }
