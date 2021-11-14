@@ -56,8 +56,10 @@
       width: 64%;
     }
     &__title {
+      font-family: ff(family-title);
       font-weight: fw(regular);
       margin-bottom: 30px;
+      color: color(black, 1);
       @include medium {
         margin-bottom: 24px;
       }
@@ -91,6 +93,7 @@
       font-weight: fw(bold);
       text-decoration: none;
       @include font-size(body);
+      color: color(black, 1);
       &:hover {
         .fi-arrow-right {
           transform: translateX(12px);

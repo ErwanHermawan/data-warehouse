@@ -39,7 +39,6 @@ const WindowResize = (() => {
       $('body').removeClass('hold-transition');
       Header.checkClass();
       Footer.footerSticky();
-      Footer.destroyAccordion();
     }
 
   }

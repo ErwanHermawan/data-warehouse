@@ -69,6 +69,7 @@
     max-width: 480px;
     @include font-size(h2);
     margin-bottom: 32px;
+    color: color(black, 1);
     @include large {
       margin-bottom: 24px;
     }
@@ -82,10 +83,10 @@
   }
   &__desc {
     max-width: 480px;
-    @include font-size(h4);
+    @include font-size(h5);
     margin-bottom: 0;
     @include medium {
-      @include font-size(h5);
+      @include font-size(h6);
     }
     @include small {
       max-width: initial;

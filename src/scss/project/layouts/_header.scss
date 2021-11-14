@@ -63,16 +63,16 @@ Layout: Header
 
   &__content {
     position: relative;
-    font-size: 0;
     @include clearfix;
   }
   &__logo {
-    display: inline-block;
-    vertical-align: middle;
+    float: left;
+    margin-right: 120px;
     transition: all 0.3s ease;
     padding: 10px 0;
     @include medium {
       padding: 0;
+      margin-right: 0;
     }
     @include small {
       padding: 4px 0;
@@ -86,8 +86,6 @@ Layout: Header
     }
   }
   &__scroll-mobile {
-    display: inline-block;
-    margin-left: 120px;
     @include medium {
       position: fixed;
       @include scroll("y", "touch", "show");
@@ -114,13 +112,30 @@ Layout: Header
   }
   &__nav {
     $n: &;
-    display: inline-block;
-    vertical-align: middle;
+    float: left;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 8px 0;
     @include medium {
+      float: none;
+      width: 100%;
       margin-bottom: 48px;
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: solid 1px color(white);
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: all .35s ease;
+        .show-nav & {
+          opacity: 1;
+          transform: none;
+          transition-delay: 650ms;
+        }
+      }
     }
     &__item {
       display: inline-block;
@@ -149,9 +164,6 @@ Layout: Header
               transition-delay: $delay;
             }
           }
-        }
-        &:last-child {
-          margin-bottom: 0;
         }
       }
       &:last-child {

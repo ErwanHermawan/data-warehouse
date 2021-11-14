@@ -12,7 +12,6 @@ Layout: Footer
   background-color: color(white);
   @include small {
     position: relative;
-    padding-bottom: 16px;
   }
   &::before {
     content: "";
@@ -51,6 +50,7 @@ Layout: Footer
     }
     &__title {
       margin-bottom: 24px;
+      color: color(black, 1);
       @include medium {
         @include font-size(h3);
         margin-bottom: 16px;
@@ -281,7 +281,7 @@ Layout: Footer
       width: 100%;
       display: block;
       text-indent: -9999999px;
-      z-index: 2;
+      z-index: zi(footer-sosmed-link);
       @include remove-tap-highlight;
     }
     .fi-facebook,
@@ -293,7 +293,7 @@ Layout: Footer
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 1;
+      z-index: zi(footer-sosmed-icon);
       @include small {
         @include font-size(h6);
       }
